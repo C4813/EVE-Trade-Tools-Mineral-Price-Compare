@@ -1,0 +1,245 @@
+/* ============================================================
+   ETT Mineral Compare — Frontend Styles
+   Matches: eve-mineral-compare original (emc-*) +
+            ett-reprocess-trading profile (ett-*)
+   ============================================================ */
+
+/* A11y */
+.screen-reader-text {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px,1px,1px,1px);
+    white-space: nowrap;
+}
+
+/* ── User inputs bar ───────────────────────────────────────── */
+#eve-mineral-user-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+/* ── Buttons ───────────────────────────────────────────────── */
+#eve-mineral-refresh,
+.emc-refresh-btn {
+    margin-top: 12px;
+    padding: 6px 12px;
+    background: #2b78e4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+#eve-mineral-refresh:hover,
+.emc-refresh-btn:hover  { background: #1d5bbf; }
+#eve-mineral-refresh:disabled,
+.emc-refresh-btn:disabled { background: #aaa; cursor: default; }
+
+#eve-mineral-status,
+.emc-refresh-status {
+    margin-top: 5px;
+    font-size: 0.85em;
+    color: #666;
+    text-align: center;
+}
+
+/* ── Section titles ─────────────────────────────────────────── */
+.emc-section-title { text-align: center; margin: 16px 0 10px; }
+
+.emc-buysell-note {
+    margin-top: -4px;
+    margin-bottom: 8px;
+    font-size: 0.85em;
+    font-style: italic;
+    color: #666;
+    text-align: center;
+}
+
+/* ── Main price tables ──────────────────────────────────────── */
+#eve-mineral-compare-tables table.emc-main-table,
+#eve-mc-extended {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#eve-mineral-compare-tables table.emc-main-table th,
+#eve-mineral-compare-tables table.emc-main-table td,
+#eve-mc-extended th,
+#eve-mc-extended td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#eve-mineral-compare-tables table.emc-main-table th,
+#eve-mc-extended th {
+    background-color: #f2f2f2;
+    color: #111;
+    font-weight: bold;
+    white-space: normal;
+    word-break: break-word;
+}
+
+#eve-mineral-compare-tables table.emc-main-table td:first-child { text-align: center; }
+
+#eve-mineral-compare-tables table.emc-main-table tbody tr:nth-child(odd),
+#eve-mc-extended tbody tr:nth-child(odd)  { background: #ffffff; }
+
+#eve-mineral-compare-tables table.emc-main-table tbody tr:nth-child(even),
+#eve-mc-extended tbody tr:nth-child(even) { background: #f7f9fc; }
+
+/* ── Rank highlighting — bold best value only, no colour shading ─ */
+#eve-mineral-compare-table-buy  td.emc-rank-1,
+#eve-mineral-compare-table-sell td.emc-rank-1 { font-weight: bold; }
+
+/* ── Trend sub-lines ────────────────────────────────────────── */
+.emc-price-val  { line-height: 1.1; }
+.emc-trend-sub  { font-size: 0.85em; margin-top: 0.15em; }
+.emc-trend-up   { color: #4EB09B; }
+.emc-trend-down { color: #DB4325; }
+.emc-trend-flat { color: #666; }
+
+/* ── Extended trade controls ────────────────────────────────── */
+#emc-hub-filters-best {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px 10px;
+    margin: 8px auto 16px;
+    text-align: center;
+}
+.emc-hub-label { font-weight: 600; font-size: 0.9em; }
+select.emc-select {
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    appearance: auto;
+    background: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    font-size: 0.9em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Ensure TH control cells (dropdowns/inputs) wrap and stay readable */
+.emc-th-label   { font-size: 0.9em; margin-bottom: 4px; white-space: normal; }
+.emc-th-control { margin-top: 2px; }
+.emc-th-control input[type="text"] {
+    width: 52px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px 6px;
+    font-size: 0.9em;
+    color: #333;
+    background: #fff;
+}
+
+#eve-mc-extended tfoot td { font-weight: 700; background: #444; color: #fff; }
+#eve-mc-extended td:first-child { text-align: center; }
+
+/* Unauthenticated fees notice */
+.emc-fees-notice {
+    margin: 0 auto 12px;
+    padding: 6px 12px;
+    max-width: 520px;
+    font-size: 0.85em;
+    color: #555;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fafafa;
+    text-align: center;
+}
+
+/* Profit sub-line in extended trade table */
+.emc-subtext { font-size: 11px; line-height: 1.2; color: #666; margin-top: 2px; }
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 960px) {
+    #eve-mineral-user-inputs { flex-direction: column; align-items: center; }
+    #emc-hub-filters-best    { gap: 8px; }
+}
+
+
+/* ============================================================
+   ETT character profile cards  (matches ett-reprocess-trading)
+   ============================================================ */
+
+.ett-character {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.ett-character-header {
+    background: #f5f5f5;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ett-character-body        { display: none; padding: 10px; }
+.ett-character-body.open   { display: block; }
+.ett-disconnect            { font-size: 0.9em; color: #c00; text-decoration: none; }
+
+.ett-character-body { text-align: center; }
+
+.ett-character-body table.ett-table {
+    width: auto !important;
+    max-width: none !important;
+    table-layout: auto !important;
+    border-collapse: collapse !important;
+    display: inline-table !important;
+    margin: 0 auto 14px !important;
+}
+.ett-character-body table.ett-table th,
+.ett-character-body table.ett-table td {
+    border: 1px solid #ccc !important;
+    padding: 6px 8px !important;
+    text-align: center !important;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.ett-character-body table.ett-table th {
+    background: #f2f2f2 !important;
+    font-weight: 700 !important;
+}
+
+.ett-token-warning { color: #c00; font-weight: bold; margin: 4px 0 12px; }
+.ett-connect-wrap  { margin-bottom: 15px; }
+
+/* Two-column layout inside each character card */
+.ettmc-char-cols {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.ettmc-char-col-left,
+.ettmc-char-col-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ettmc-char-col-left .ettmc-sales-tax {
+    margin: 8px 0 0;
+    font-size: 0.9em;
+}
+
+/* Strip alternating row colours from character skill/fee tables */
+.ettmc-profile-wrapper .ett-character-body table.ett-table tbody tr,
+.ettmc-profile-wrapper .ett-character-body table.ett-table tbody tr:nth-child(odd),
+.ettmc-profile-wrapper .ett-character-body table.ett-table tbody tr:nth-child(even) {
+    background: transparent !important;
+}
+
+@media (max-width: 600px) {
+    .ettmc-char-cols { flex-direction: column; align-items: center; }
+}
