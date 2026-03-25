@@ -2,7 +2,7 @@
 /*
 Plugin Name: EVE Trade Tools Mineral Compare
 Description: Mineral price comparison across EVE trade hubs with SSO character authentication, auto-calculated fees, extended trade simulation, and trend indicators.
-Version: 0.2.8
+Version: 1.0.0
 Author: C4813
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -11,7 +11,7 @@ Requires Plugins: ett-price-helper
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'ETTMC_VERSION', '0.2.8' );
+define( 'ETTMC_VERSION', '1.0.0' );
 define( 'ETTMC_PATH',    plugin_dir_path( __FILE__ ) );
 define( 'ETTMC_URL',     plugin_dir_url( __FILE__ ) );
 
